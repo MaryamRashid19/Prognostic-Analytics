@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="..//magnifying-glass-chart-solid.svg" type="image/svg+xml">
+    <title>Case Study | Prognostic Analytics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/root.css">
+    <link rel="stylesheet" href="./css/case.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>Prognostic Analytics
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="approach.html">The Approach</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="applications.html">Applications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="case.html">Case Study</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="insights.html">Insights</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutme.html">About Me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+     <!-- Hero Section -->
+<header class="case-hero animate__animated animate__fadeIn">
+    <div class="container">
+        <h1 class="display-3 fw-bold">Predictive Modeling for Insurance Cost Optimization</h1>
+        <p class="lead">Leveraging prognostic analytics to understand and predict healthcare costs based on demographic and lifestyle factors</p>
+    </div>
+</header>
+
+<!-- Introduction Section -->
+    <section class="introduction py-5 bg-white">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <h2 class="mb-4">The Challenge of Healthcare Cost Prediction</h2>
+                <p class="lead">In an era of rising healthcare costs, insurance providers face the critical challenge of accurately assessing risk and pricing premiums fairly. Traditional actuarial methods often fail to capture complex interactions between multiple risk factors, leading to either overpricing (driving away healthy customers) or underpricing (resulting in financial losses).</p>
+                
+                <div class="row mt-5 g-4">
+                    <div class="col-md-4">
+                        <div class="problem-card p-4 h-100">
+                            <i class="fas fa-question-circle fa-3x mb-3 text-primary"></i>
+                            <h4>The Problem</h4>
+                            <p>Insurance companies need accurate cost predictions to remain competitive while maintaining profitability, but traditional models lack granularity in risk assessment.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="problem-card p-4 h-100">
+                            <i class="fas fa-lightbulb fa-3x mb-3 text-primary"></i>
+                            <h4>Our Solution</h4>
+                            <p>Prognostic analytics combines machine learning with causal inference to identify not just correlations, but the actual drivers of healthcare costs.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="problem-card p-4 h-100">
+                            <i class="fas fa-chart-line fa-3x mb-3 text-primary"></i>
+                            <h4>The Impact</h4>
+                            <p>Our model achieves 92% accuracy in predicting individual medical costs, enabling fair pricing and better risk management.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- Dataset Overview -->
+    <section class="dataset-overview py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 animate-on-scroll">
+                    <h2 class="mb-4">Dataset Characteristics</h2>
+                    <p>The analysis utilizes the Medical Cost Personal Dataset from Kaggle, containing 1,338 records with the following key variables:</p>
+                    
+                    <ul class="dataset-features">
+                        <li><strong>Age:</strong> Range from 18 to 64 years</li>
+                        <li><strong>BMI:</strong> Body Mass Index (continuous)</li>
+                        <li><strong>Children:</strong> Number of dependents (0-5)</li>
+                        <li><strong>Smoker:</strong> Binary indicator (yes/no)</li>
+                        <li><strong>Region:</strong> Geographic location (4 regions)</li>
+                        <li><strong>Charges:</strong> Individual medical costs billed by insurance (target variable)</li>
+                    </ul>
+                    
+                    <p>The dataset presents a realistic scenario for predicting healthcare costs based on demographic and lifestyle factors.</p>
+                </div>
+                <div class="col-lg-6 animate-on-scroll">
+                    <div class="dataset-stats">
+                        <div class="stat-card">
+                            <div class="stat-value">1,338</div>
+                            <div class="stat-label">Records</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">6</div>
+                            <div class="stat-label">Features</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">92%</div>
+                            <div class="stat-label">R² Score</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">5x</div>
+                            <div class="stat-label">Smoker Cost Multiplier</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Findings -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Key Determinants of Insurance Costs</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-4 animate-on-scroll">
+                    <div class="factor-card">
+                        <div class="card-body p-4">
+                            <div class="factor-icon">
+                                <i class="fas fa-smoking"></i>
+                            </div>
+                            <h3>Smoking Status</h3>
+                            <div class="impact-meter" data-percent="85%" style="width: 85%;"></div>
+                            <p>Smokers pay 5x higher premiums on average compared to non-smokers with similar profiles. SHAP analysis identifies this as the most significant cost driver.</p>
+                            <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#smokingModal">
+                                View Analysis <i class="fas fa-arrow-right ms-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 animate-on-scroll">
+                    <div class="factor-card">
+                        <div class="card-body p-4">
+                            <div class="factor-icon">
+                                <i class="fas fa-weight"></i>
+                            </div>
+                            <h3>BMI</h3>
+                            <div class="impact-meter" data-percent="65%" style="width: 65%;"></div>
+                            <p>Individuals with BMI > 30 showed significantly higher costs, especially when combined with smoking. The relationship becomes non-linear at higher BMI values.</p>
+                            <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#bmiModal">
+                                View Analysis <i class="fas fa-arrow-right ms-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 animate-on-scroll">
+                    <div class="factor-card">
+                        <div class="card-body p-4">
+                            <div class="factor-icon">
+                                <i class="fas fa-birthday-cake"></i>
+                            </div>
+                            <h3>Age</h3>
+                            <div class="impact-meter" data-percent="45%" style="width: 45%;"></div>
+                            <p>Costs increase steadily with age, though less dramatically than with smoking status. The relationship is approximately linear with a clear upward trend.</p>
+                            <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#ageModal">
+                                View Analysis <i class="fas fa-arrow-right ms-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cost Comparison -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 animate-on-scroll">
+                    <h2 class="mb-4">Cost Disparity Analysis</h2>
+                    <p>Our analysis revealed dramatic differences in insurance costs based on smoking status, even when all other factors are held constant.</p>
+                    
+                    <div class="cost-comparison mt-4">
+                        <div class="comparison-item">
+                            <div class="comparison-label">Non-Smoker</div>
+                            <div class="comparison-bar" style="width: 20%;">
+                                <span class="comparison-value">$3,883</span>
+                            </div>
+                        </div>
+                        <div class="comparison-item">
+                            <div class="comparison-label">Smoker</div>
+                            <div class="comparison-bar" style="width: 100%;">
+                                <span class="comparison-value">$19,390</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="mt-3">This 5x cost multiplier for smokers persists across all age groups and BMI categories, indicating smoking as the primary cost driver.</p>
+                </div>
+                <div class="col-lg-6 animate-on-scroll">
+                    <div class="comparison-chart pulse">
+                        <canvas id="costChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interaction Effects -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Factor Interaction Effects</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-6 animate-on-scroll">
+                    <div class="interaction-card">
+                        <div class="interaction-header">
+                            <i class="fas fa-fire"></i>
+                            <h3>Smoking × BMI</h3>
+                        </div>
+                        <div class="interaction-body">
+                            <p>The combination of smoking and high BMI creates a synergistic effect on insurance costs. Smokers with BMI > 30 face costs 6-7x higher than healthy non-smokers.</p>
+                            <div class="interaction-visual">
+                                <div class="interaction-bar" style="height: 30%;">Non-Smoker<br>BMI < 30</div>
+                                <div class="interaction-bar" style="height: 100%;">Smoker<br>BMI > 30</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 animate-on-scroll">
+                    <div class="interaction-card">
+                        <div class="interaction-header">
+                            <i class="fas fa-user-plus"></i>
+                            <h3>Age × Smoking</h3>
+                        </div>
+                        <div class="interaction-body">
+                            <p>While age increases costs for all individuals, the smoking multiplier remains consistent across age groups. A 60-year-old smoker pays 5x more than a 60-year-old non-smoker.</p>
+                            <div class="interaction-visual">
+                                <div class="interaction-bar" style="height: 40%;">Age 30<br>Non-Smoker</div>
+                                <div class="interaction-bar" style="height: 100%;">Age 60<br>Smoker</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals -->
+    <div class="modal fade" id="smokingModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Smoking Impact Analysis</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="analysis-findings mt-4">
+                        <h4>Key Findings:</h4>
+                        <ul>
+                            <li>Smoking accounts for 85% of the variation in predicted insurance costs</li>
+                            <li>The average smoker pays $19,390 annually compared to $3,883 for non-smokers</li>
+                            <li>This 5x cost multiplier is consistent across all age groups and regions</li>
+                            <li>Smoking status has higher predictive importance than all other factors combined</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="bmiModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">BMI Impact Analysis</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="analysis-findings mt-4">
+                        <h4>Key Findings:</h4>
+                        <ul>
+                            <li>BMI accounts for 65% of the variation in predicted insurance costs</li>
+                            <li>The relationship becomes non-linear above BMI 30 (obese range)</li>
+                            <li>When combined with smoking, high BMI leads to exponential cost increases</li>
+                            <li>Each 5-unit BMI increase correlates with 12-15% higher costs for non-smokers</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="ageModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Age Impact Analysis</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="analysis-findings mt-4">
+                        <h4>Key Findings:</h4>
+                        <ul>
+                            <li>Age accounts for 45% of the variation in predicted insurance costs</li>
+                            <li>Costs increase approximately $250 per year of age</li>
+                            <li>The relationship is linear with no significant threshold effects</li>
+                            <li>Age-related increases are consistent across smoking status and BMI categories</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <a href="#" class="footer-logo">Prognostic Analytics</a>
+            <p class="footer-about">
+                An innovative solution developed as a final year project to revolutionize 
+                predictive analytics with causal insights for informed decision making.
+            </p>
+        </div>
+        
+        <div class="footer-contact">
+            <h3>Get In Touch</h3>
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-info">
+                    <span>Email</span>
+                    <a href="mailto:meriumr2219@gmail.com">meriumr2219@gmail.com</a>
+                </div>
+            </div>
+            
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fab fa-github"></i>
+                </div>
+                <div class="contact-info">
+                    <span>GitHub</span>
+                    <a href="https://github.com/MaryamRashid19" target="_blank">https://github.com/MaryamRashid19</a>
+                </div>
+            </div>
+            
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fab fa-linkedin"></i>
+                </div>
+                <div class="contact-info">
+                    <span>LinkedIn</span>
+                    <a href="https://www.linkedin.com/in/maryam-r/" target="_blank">www.linkedin.com/in/maryam-r</a>
+                </div>
+            </div>
+            
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-info">
+                    <span>Institution</span>
+                    <p>CASPAM, BZU</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom JS -->
+    <script src="./js/script.js"></script>
+    <script>
+        // Chart.js implementation
+        const ctx = document.getElementById('costChart').getContext('2d');
+        const costChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Non-Smoker', 'Smoker'],
+                datasets: [{
+                    label: 'Annual Premium ($)',
+                    data: [3883, 19390],
+                    backgroundColor: [
+                        'rgba(75, 192, 192, 0.7)',
+                        'rgba(255, 99, 132, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(255, 99, 132, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return '$' + context.raw.toLocaleString();
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) {
+                                return '$' + value.toLocaleString();
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

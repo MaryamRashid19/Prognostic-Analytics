@@ -1,0 +1,268 @@
+/* Portfolio About Me Styles */
+.name-header {
+    padding: 60px 0;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.name-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: var(--dark-color);
+    display: inline-block;
+    position: relative;
+    animation: fadeInUp 1s ease-out;
+}
+
+.name-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 2px;
+    background: var(--primary-color);
+    animation: lineExpand 0.8s ease-out 0.5s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes lineExpand {
+    from {
+        width: 0;
+    }
+    to {
+        width: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .name-title {
+        font-size: 2.8rem;
+    }
+    .name-header {
+        padding: 50px 0;
+    }
+}
+/* About Section */
+.about-section {
+    padding: 5rem 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--primary-color);
+}
+
+.education-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    height: 100%;
+}
+
+.card-title {
+    color: var(--dark-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.edu-item {
+    margin-bottom: 1.5rem;
+}
+
+.edu-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 5rem 0;
+}
+
+.skill-category-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    height: 100%;
+}
+
+.category-title {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-list li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.skill-list li:last-child {
+    border-bottom: none;
+}
+
+/* Certifications Section */
+.certifications-section {
+    padding: 5rem 0;
+}
+
+.certification-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    height: 100%;
+    text-align: center;
+}
+
+.certification-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Experience Section */
+.experience-section {
+    padding: 5rem 0;
+}
+
+.experience-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.exp-header {
+    margin-bottom: 1rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 5rem 0;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    text-align: center;
+}
+
+.contact-item i {
+    color: var(--primary-color);
+}
+
+/* Footer */
+.footer {
+    background: var(--dark-color);
+    color: white;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .portfolio-hero {
+        padding: 120px 0 60px;
+        text-align: center;
+    }
+    
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .image-wrapper {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .image-wrapper i {
+        font-size: 6rem;
+    }
+    
+    .section-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+/* Projects Section */
+.projects-section {
+    padding: 5rem 0;
+}
+
+.project-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    background: rgba(106, 99, 235, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-image i {
+    font-size: 4rem;
+    color: var(--primary-color);
+}
+

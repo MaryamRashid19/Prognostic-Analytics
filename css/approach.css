@@ -1,0 +1,402 @@
+/* Approach Page Styles */
+.approach-hero {
+    padding: 100px 0 50px;
+    /* background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); */
+    background: radial-gradient(circle, #2d2d3a, #3b34a3);
+    /* background: conic-gradient(from 360deg, #2d2d3a, #3b34a3, #2d2d3a, #3b34a3); */
+    color: white;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.approach-hero::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.approach-hero::after {
+    content: "";
+    position: absolute;
+    bottom: -100px;
+    left: -50px;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+}
+
+/* Prognostic Definition Section */
+.prognostic-definition {
+    background: white;
+}
+
+.definition-card {
+    background: rgba(106, 99, 235, 0.05);
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.feature-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.feature-list li {
+    padding: 8px 0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.feature-list li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+.value-proposition {
+    background: linear-gradient(135deg, rgba(106, 99, 235, 0.03), rgba(255, 101, 132, 0.03));
+    border-radius: 10px;
+    border-top: 2px solid var(--primary-color);
+}
+
+/* Method Cards */
+.method-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    height: 320px;
+    background: white;
+    position: relative;
+}
+
+.method-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.method-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    background: rgba(106, 99, 235, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.method-card:hover .method-icon {
+    background: var(--primary-color);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.badges{
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%,-80%);
+    display: flex;
+}
+
+.tech-badge {
+    background: var(--dark-color);
+    color: white;
+    margin: 5px;
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 0.8rem;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.tech-badge:hover {
+    background: var(--accent-color);
+    transform: scale(1.05);
+}
+
+/* Applications Section */
+.applications {
+    background: #f9f9ff;
+}
+
+.application-card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    height: 100%;
+    transition: transform 0.3s ease;
+    background: white;
+}
+
+.application-card:hover {
+    transform: translateY(-5px);
+}
+
+.application-header {
+    padding: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.application-header i {
+    font-size: 1.8rem;
+}
+
+.application-body {
+    padding: 20px;
+}
+
+.use-case {
+    margin-bottom: 20px;
+}
+
+.use-case h4 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* Industry-specific colors */
+.healthcare .application-header {
+    background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+}
+.manufacturing .application-header {
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+}
+.business .application-header {
+    background: linear-gradient(135deg, #2ecc71, #1abc9c);
+}
+.emerging .application-header {
+    background: linear-gradient(135deg, #e67e22, #f39c12);
+}
+
+/* Challenges Section */
+.challenges {
+    background: white;
+}
+
+.challenge-card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    height: 100%;
+    transition: all 0.5s ease;
+    background: white;
+    border-top: 4px solid var(--primary-color);
+}
+
+.challenge-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.challenge-header {
+    padding: 20px;
+    background: rgba(106, 99, 235, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.challenge-header i {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+.challenge-body {
+    padding: 20px;
+}
+
+.challenge-points {
+    margin-top: 15px;
+}
+
+.point {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed rgba(0,0,0,0.1);
+}
+
+.point h4 {
+    color: var(--dark-color);
+    font-size: 1rem;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.point h4 i {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+.point p {
+    font-size: 0.9rem;
+    color: #666;
+    padding-left: 28px;
+}
+
+/* Strategies */
+.strategies {
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.strategy-card {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    height: 100%;
+    transition: all 0.3s ease;
+    text-align: center;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.strategy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.strategy-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background: rgba(106, 99, 235, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.strategy-card:hover .strategy-icon {
+    background: var(--primary-color);
+    color: white;
+    transform: rotate(15deg);
+}
+
+.strategy-card h4 {
+    color: var(--dark-color);
+    margin-bottom: 10px;
+}
+
+.strategy-card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .application-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+/* Floating Animation */
+.floating {
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .approach-hero {
+        padding: 150px 0 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .approach-hero {
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+        padding: 120px 0 60px;
+    }
+    
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .approach-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .feature-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .feature-name {
+        margin-bottom: 5px;
+    }
+    
+    .feature-bar {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+/* Report Viewer Styles */
+.pdf-container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 900px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.pdf-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important;
+}
+
+.pdf-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Button Enhancements */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    padding: 12px 30px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(106, 99, 235, 0.4);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(106, 99, 235, 0.5);
+}
+
+.btn-outline-light:hover {
+    color: var(--dark-color) !important;
+    background: white;
+}
